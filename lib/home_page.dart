@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_buttons/container_box.dart';
+import 'package:flutter_buttons/elevated_button.dart';
 
 class MyHomePage extends StatefulWidget {
-
   const MyHomePage({
-    super.key, 
-    required this.title
-    });
+    super.key,
+    required this.title,
+  });
 
   final String title;
 
@@ -15,7 +14,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
+  void _onButtonPressed() {
+    print('CustomElevatedButton pressed!');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,16 +25,12 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: ListView(
-        children: [
-          ContainerBox(
-            buttonName: 'Elevated Button',
-          ),
-          ContainerBox(
-            buttonName: 'Outlined Button',
-          ),
-        ],
-      )
+      body: Center(
+        child: MyElevatedButton(
+          text: 'Press Me',
+          onPressed: _onButtonPressed,
+        ),
+      ),
     );
   }
 }

@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
 class MyElevatedButton extends StatelessWidget {
-  const MyElevatedButton({super.key});
-
-  void _onButtonPressed() {
-    print('ElevatedButton pressed!');
-  }
+  final String text;
+  final VoidCallback onPressed;
+  const MyElevatedButton({
+    super.key,
+    required this.text,
+    required this.onPressed,
+    });
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: ElevatedButton(
-        onPressed: _onButtonPressed,
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.white, 
           backgroundColor: Colors.blue, // Text color
@@ -20,7 +22,7 @@ class MyElevatedButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        child: const Text('Press Me'),
+        child: Text(text),
       ),
     );
   }
