@@ -17,20 +17,24 @@ class MyElevatedButton extends StatelessWidget {
           alignment: Alignment.center,
           padding: const EdgeInsets.all(24.0),
           decoration: BoxDecoration(
-            color: Colors.blue,
+            color: const Color.fromARGB(255, 235, 235, 235),
             borderRadius: BorderRadius.circular(12),
         ),
-        child: ElevatedButton(
-          onPressed: onPressed,
-          style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.white, 
-            backgroundColor: Colors.blue, // Text color
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
+        child: SizedBox(
+          width: 300,
+          height: 50,
+          child: ElevatedButton(
+            onPressed: onPressed,
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.white, 
+              backgroundColor: Colors.blue, // Text color
+              //padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
             ),
+            child: Text(text),
           ),
-          child: Text(text),
         ),
       ),
     );
