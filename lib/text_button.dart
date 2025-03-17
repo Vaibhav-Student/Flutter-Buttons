@@ -25,14 +25,14 @@ class CustomTextButton extends StatelessWidget{
           height: 50,
           child: TextButton(
             onPressed: onPressed,
-            child: Text(text),
             style: TextButton.styleFrom(
               foregroundColor: Color.fromARGB(255, 2, 175, 255),
               backgroundColor: Color.fromARGB(255, 255, 255, 255),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-            )
+            ),
+            child: Text(text)
           ),
         ),
       ),
