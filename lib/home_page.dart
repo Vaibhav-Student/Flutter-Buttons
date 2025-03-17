@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_buttons/elevated_button.dart';
+import 'package:flutter_buttons/text_button.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
@@ -35,6 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
 
           //TextButton
+          CustomTextButton(
+            text: "Text Button", 
+            onPressed: _onButtonPressed,
+            ),
 
           //OutlinedButton
 
