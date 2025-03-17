@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           //elevated button
           MyElevatedButton(
-            text: 'Press Me',
+            text: 'Elevated Button',
             onPressed: _onButtonPressed,
           ),
 
