@@ -25,11 +25,13 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: MyElevatedButton(
-          text: 'Press Me',
-          onPressed: _onButtonPressed,
-        ),
+      body: ListView(
+        children: [ 
+          MyElevatedButton(
+            text: 'Press Me',
+            onPressed: _onButtonPressed,
+          ),
+        ]
       ),
     );
   }
