@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_buttons/elevated_button.dart';
+import 'package:flutter_buttons/iconbutton.dart';
 import 'package:flutter_buttons/outlinedbutton.dart';
 import 'package:flutter_buttons/text_button.dart';
 
@@ -49,6 +50,15 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
 
           //IconButton
+          CustomIconButton(
+            icon: Icons.thumb_up,
+            onPressed: _onButtonPressed,
+            tooltip: 'Like',
+            color: Colors.blue,
+            iconSize: 20.0,
+            // padding: const EdgeInsets.all(16.0),
+            // alignment: Alignment.center,
+          ),
 
         ]
       ),
