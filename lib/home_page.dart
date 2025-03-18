@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_buttons/dropdownbutton.dart';
 import 'package:flutter_buttons/elevated_button.dart';
 import 'package:flutter_buttons/iconbutton.dart';
+import 'package:flutter_buttons/materialbutton.dart';
 import 'package:flutter_buttons/outlinedbutton.dart';
 import 'package:flutter_buttons/popupmenubutton.dart';
 import 'package:flutter_buttons/second_page.dart';
@@ -109,6 +110,15 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
 
           //MaterialButton
+          CustomMaterialButton(
+            text: 'Material Button',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondPage()),
+              );
+            },
+          ),
 
           //RawMaterialButton
 
