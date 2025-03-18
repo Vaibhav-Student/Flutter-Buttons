@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class MyElevatedButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
+  final String tooltip;
   const MyElevatedButton({
     super.key,
     required this.text,
     required this.onPressed,
+    required this.tooltip,
     });
 
   @override
@@ -23,17 +25,20 @@ class MyElevatedButton extends StatelessWidget {
         child: SizedBox(
           width: 300,
           height: 50,
-          child: ElevatedButton(
-            onPressed: onPressed,
-            style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white, 
-              backgroundColor: Colors.blue, // Text color
-              //padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+          child: Tooltip(
+            message: tooltip,
+            child: ElevatedButton(
+              onPressed: onPressed,
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white, 
+                backgroundColor: Colors.blue, // Text color
+                //padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
               ),
+              child: Text(text),
             ),
-            child: Text(text),
           ),
         ),
       ),

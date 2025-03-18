@@ -35,18 +35,21 @@ class _MyHomePageState extends State<MyHomePage> {
           //elevated button
           MyElevatedButton(
             text: 'Elevated Button',
+            tooltip: "Elevated Button",
             onPressed: _onButtonPressed,
           ),
 
           //TextButton
           CustomTextButton(
             text: "Text Button", 
+            tooltip: "Text Button",
             onPressed: _onButtonPressed,
             ),
 
           //OutlinedButton
           CustomOutlinedButton(
             text: "Outlined Button",
+            tooltip: "Outlined Button",
             onPressed: _onButtonPressed,
           ),
 
@@ -64,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
           //floatingActionButton
           CustomFloatingActionButton(
             onPressed: _onButtonPressed,
-            tooltip: 'Increment',
+            tooltip: 'Floating Action Button',
             backgroundColor: Colors.blue,
             foregroundColor: Colors.white,
             elevation: 5.0,
