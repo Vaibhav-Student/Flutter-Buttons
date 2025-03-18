@@ -3,6 +3,7 @@ import 'package:flutter_buttons/dropdownbutton.dart';
 import 'package:flutter_buttons/elevated_button.dart';
 import 'package:flutter_buttons/iconbutton.dart';
 import 'package:flutter_buttons/outlinedbutton.dart';
+import 'package:flutter_buttons/popupmenubutton.dart';
 import 'package:flutter_buttons/text_button.dart';
 import 'package:flutter_buttons/floatingactionbutton.dart';
 
@@ -80,6 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
           CustomDropdownButton(),
 
           //PopupMenuButton
+          CustomPopupMenuButton(),
 
           //BackButton
 
