@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_buttons/elevated_button.dart';
+import 'package:flutter_buttons/outlinedbutton.dart';
 import 'package:flutter_buttons/text_button.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -42,6 +43,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
 
           //OutlinedButton
+          CustomOutlinedButton(
+            text: "Outlined Button",
+            onPressed: _onButtonPressed,
+          ),
 
           //IconButton
 
