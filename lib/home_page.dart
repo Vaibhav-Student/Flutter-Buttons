@@ -3,6 +3,7 @@ import 'package:flutter_buttons/elevated_button.dart';
 import 'package:flutter_buttons/iconbutton.dart';
 import 'package:flutter_buttons/outlinedbutton.dart';
 import 'package:flutter_buttons/text_button.dart';
+import 'package:flutter_buttons/floatingactionbutton.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
@@ -61,6 +62,15 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
 
           //floatingActionButton
+          CustomFloatingActionButton(
+            onPressed: _onButtonPressed,
+            tooltip: 'Increment',
+            backgroundColor: Colors.blue,
+            foregroundColor: Colors.white,
+            elevation: 5.0,
+            shape: const CircleBorder(),
+            child: const Icon(Icons.add),
+          ),
 
           //DropDownButton
 
