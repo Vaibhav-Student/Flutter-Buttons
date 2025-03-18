@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_buttons/backbutton.dart';
+import 'package:flutter_buttons/closebutton.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({super.key});
@@ -12,7 +13,7 @@ class SecondPage extends StatelessWidget {
         leading: CustomBackButton(),
       ),
       body: const Center(
-        child: Text('This is the second page'),
+        child: CustomCloseButton(),
       ),
     );
   }

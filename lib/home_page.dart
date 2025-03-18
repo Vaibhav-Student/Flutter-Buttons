@@ -96,6 +96,25 @@ class _MyHomePageState extends State<MyHomePage> {
             },
           ),
 
+          //CloseButton
+          MyElevatedButton(
+            text: 'Go to second page',
+            tooltip: "For close button",
+            onPressed:() {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondPage()),
+              );
+            },
+          ),
+
+          //MaterialButton
+
+          //RawMaterialButton
+
+          //InkWell
+
+          //GestureDetector
 
         ]
       ),
