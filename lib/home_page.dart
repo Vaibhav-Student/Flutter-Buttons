@@ -5,6 +5,7 @@ import 'package:flutter_buttons/iconbutton.dart';
 import 'package:flutter_buttons/materialbutton.dart';
 import 'package:flutter_buttons/outlinedbutton.dart';
 import 'package:flutter_buttons/popupmenubutton.dart';
+import 'package:flutter_buttons/rawmaterialbutton.dart';
 import 'package:flutter_buttons/second_page.dart';
 import 'package:flutter_buttons/text_button.dart';
 import 'package:flutter_buttons/floatingactionbutton.dart';
@@ -121,6 +122,16 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
 
           //RawMaterialButton
+          CustomRawMaterialButton(
+            text: 'Raw Material Button',
+            tooltip: "Raw Material Button",
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondPage()),
+              );
+            },
+          ),
 
           //InkWell
 

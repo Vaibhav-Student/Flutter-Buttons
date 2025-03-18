@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
 
-class CustomMaterialButton extends StatelessWidget {
+class CustomRawMaterialButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
-  final Color color;
-  final Color textColor;
-  final Color disabledColor;
-  final Color disabledTextColor;
+  final Color fillColor;
+  final TextStyle textStyle;
   final Color highlightColor;
   final Color splashColor;
   final double elevation;
   final EdgeInsetsGeometry padding;
   final ShapeBorder shape;
+  final BoxConstraints constraints;
+  final String tooltip;
 
-  const CustomMaterialButton({
+  const CustomRawMaterialButton({
     super.key,
+    required this.tooltip,
     required this.text,
     required this.onPressed,
-    this.color = const Color.fromARGB(255, 248, 136, 0),
-    this.textColor = Colors.white,
-    this.disabledColor = Colors.grey,
-    this.disabledTextColor = Colors.black,
-    this.highlightColor = const Color.fromARGB(255, 245, 28, 191),
+    this.fillColor = Colors.blue,
+    this.textStyle = const TextStyle(color: Colors.white),
+    this.highlightColor = Colors.lightBlueAccent,
     this.splashColor = Colors.blueAccent,
     this.elevation = 5.0,
     this.padding = const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
     this.shape = const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(12)),
     ),
+    this.constraints = const BoxConstraints(minWidth: 100, minHeight: 50),
   });
 
   @override
@@ -44,18 +44,20 @@ class CustomMaterialButton extends StatelessWidget {
         child: SizedBox(
           width: 300,
           height: 50,
-          child: MaterialButton(
-            onPressed: onPressed,
-            color: color,
-            textColor: textColor,
-            disabledColor: disabledColor,
-            disabledTextColor: disabledTextColor,
-            highlightColor: highlightColor,
-            splashColor: splashColor,
-            elevation: elevation,
-            padding: padding,
-            shape: shape,
-            child: Text(text),
+          child: Tooltip(
+            message: tooltip,
+            child: RawMaterialButton(
+              onPressed: onPressed,
+              fillColor: fillColor,
+              textStyle: textStyle,
+              highlightColor: highlightColor,
+              splashColor: splashColor,
+              elevation: elevation,
+              padding: padding,
+              shape: shape,
+              constraints: constraints,
+              child: Text(text),
+            ),
           ),
         ),
       ),
