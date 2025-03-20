@@ -18,32 +18,35 @@ class CustomInkWell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      padding: const EdgeInsets.all(24.0),
-      decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 235, 235, 235),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: SizedBox(
-        width: 300,
-        height: 50,
-        child: Tooltip(
-          message: 'InkWell Button',
-          child: InkWell(
-            onTap: onTap,
-            splashColor: splashColor,
-            highlightColor: highlightColor,
-            borderRadius: borderRadius,
-            child: Container(
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 255, 140, 1),
-                borderRadius: borderRadius,
-              ),
-              child: Center(
-                child: Text(
-                  text,
-                  style: const TextStyle(color: Colors.white),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.all(24.0),
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 235, 235, 235),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: SizedBox(
+          width: 300,
+          height: 50,
+          child: Tooltip(
+            message: 'InkWell Button',
+            child: InkWell(
+              onTap: onTap,
+              splashColor: splashColor,
+              highlightColor: highlightColor,
+              borderRadius: borderRadius,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 255, 140, 1),
+                  borderRadius: borderRadius,
+                ),
+                child: Center(
+                  child: Text(
+                    text,
+                    style: const TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ),
