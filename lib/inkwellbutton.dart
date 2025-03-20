@@ -11,27 +11,43 @@ class CustomInkWell extends StatelessWidget {
     super.key,
     required this.text,
     required this.onTap,
-    this.splashColor = Colors.blue,
-    this.highlightColor = Colors.lightBlueAccent,
+    this.splashColor = const Color.fromARGB(255, 255, 72, 0),
+    this.highlightColor = const Color.fromARGB(255, 248, 115, 7),
     this.borderRadius = const BorderRadius.all(Radius.circular(12)),
   });
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      splashColor: splashColor,
-      highlightColor: highlightColor,
-      borderRadius: borderRadius,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: borderRadius,
-        ),
-        child: Text(
-          text,
-          style: const TextStyle(color: Colors.white),
+    return Container(
+      alignment: Alignment.center,
+      padding: const EdgeInsets.all(24.0),
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 235, 235, 235),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: SizedBox(
+        width: 300,
+        height: 50,
+        child: Tooltip(
+          message: 'InkWell Button',
+          child: InkWell(
+            onTap: onTap,
+            splashColor: splashColor,
+            highlightColor: highlightColor,
+            borderRadius: borderRadius,
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 255, 140, 1),
+                borderRadius: borderRadius,
+              ),
+              child: Center(
+                child: Text(
+                  text,
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+          ),
         ),
       ),
     );

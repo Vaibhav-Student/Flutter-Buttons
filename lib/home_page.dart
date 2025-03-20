@@ -137,7 +137,12 @@ class _MyHomePageState extends State<MyHomePage> {
           //InkWell
           CustomInkWell(
             text: 'InkWell Button',
-            onTap: _onButtonPressed,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondPage()),
+              );
+            },
           ),
 
           //GestureDetector
