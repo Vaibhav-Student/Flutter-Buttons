@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_buttons/dropdownbutton.dart';
 import 'package:flutter_buttons/elevated_button.dart';
+import 'package:flutter_buttons/gesturedetectorbutton.dart';
 import 'package:flutter_buttons/iconbutton.dart';
 import 'package:flutter_buttons/inkwellbutton.dart';
 import 'package:flutter_buttons/materialbutton.dart';
@@ -146,6 +147,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
 
           //GestureDetector
+          CustomGestureDetector(
+            text: 'GestureDetector Button',
+            onTap: _onButtonPressed,
+          ),
 
         ]
       ),
