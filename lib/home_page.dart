@@ -149,7 +149,12 @@ class _MyHomePageState extends State<MyHomePage> {
           //GestureDetector
           CustomGestureDetector(
             text: 'GestureDetector Button',
-            onTap: _onButtonPressed,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondPage()),
+              );
+            },
           ),
 
         ]
