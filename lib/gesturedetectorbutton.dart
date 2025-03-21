@@ -30,16 +30,19 @@ class CustomGestureDetector extends StatelessWidget {
           height: 50,
           child: GestureDetector(
             onTap: onTap,
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-              decoration: BoxDecoration(
-                color: color,
-                borderRadius: borderRadius,
-              ),
-              child: Center(
-                child: Text(
-                  text,
-                  style: const TextStyle(color: Colors.white),
+            child: Tooltip(
+              message: "Gesture Detector Button",
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                decoration: BoxDecoration(
+                  color: color,
+                  borderRadius: borderRadius,
+                ),
+                child: Center(
+                  child: Text(
+                    text,
+                    style: const TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             ),
